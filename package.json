@@ -1,0 +1,17 @@
+{
+  "name": "project_boostrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch ./src/sass/main.scss ./assets/css/main.css",
+    "pug": "pug -w ./src/pug/Pages/ -o ./ -P",
+    "start": "npm-run-all -p -r scss"
+  },
+  "author": "Hien Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

@@ -1,0 +1,64 @@
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+@mixin text($color, $font-size, $line-height: false, $font-weight: false) {
+    color: $color;
+    font-size: $font-size;
+    @if $line-height {
+        line-height: $line-height;
+    }
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
+}
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+      box-shadow:inset $top $left $blur $color;
+    } @else {
+      box-shadow: $top $left $blur $color;
+    }
+}
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+@mixin border-radius($all: null, $tl: $all, $tr: $all, $btl: $all, $btr: $all) {
+    border-top-left-radius: $tl;
+    border-top-right-radius: $tr ;
+    border-bottom-right-radius: $btr;
+    border-bottom-left-radius: $btl;
+}
+@mixin centerAbsolute($pos) {
+    position: absolute;
+    @if $pos == "both" {
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+    } @else if $pos == "left" {
+        left: 50%;
+        @include transform(translateX(-50%));
+    } @else if $pos == "top" {
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+}
+@mixin flex($direction: row, $content: null , $items: null, $wrap: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $items;
+    flex-wrap: $wrap;
+}
+@mixin responsive($screen) {
+    @if map-has-key($map:$breakpoints, $key:$screen){
+        $value: map-get($map:$breakpoints , $key:$screen);
+        @media screen and (max-width:$value){
+            @content;
+        }
+    }
+    @else{
+        @warn "`{$screen}` isn't exist in breakpoints";
+    }
+}

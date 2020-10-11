@@ -1,0 +1,316 @@
+/*-------- RESET -------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*-------- SETTING -------*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #353535;
+  background: white;
+}
+
+body button, .btn, body a {
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+
+.btn:hover, body button:hover {
+  opacity: 0.8;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.join-1 .container {
+  height: 100vh;
+}
+.join-1 .content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join-1 .content .content-wrap {
+  text-align: center;
+  width: 31%;
+}
+@media screen and (max-width: 1200px) {
+  .join-1 .content .content-wrap {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .join-1 .content .content-wrap {
+    width: 80%;
+  }
+}
+.join-1 .content .logo-title {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.join-1 .content .title {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.join-1 .content .dots {
+  display: flex;
+  justify-content: center;
+}
+.join-1 .content .dots .dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  margin: 2rem 0.8rem;
+}
+.join-1 .content .dots .active {
+  background-color: #868585;
+}
+.join-1 .content .form input {
+  margin: 0.5rem 0;
+  width: 345px;
+  height: 4.5rem;
+  border: 2px solid #656565;
+  border-radius: 51px;
+  padding: 0 2rem;
+}
+.join-1 .content .form input:focus {
+  outline: none;
+}
+.join-1 .content .form button {
+  background: #330D59;
+  border-radius: 20px;
+  font-size: 2rem;
+  color: white;
+  font-weight: 500;
+  padding: 1rem 2.5rem;
+  margin-top: 1rem;
+}
+
+.join-2 .container {
+  height: 100vh;
+}
+.join-2 .content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join-2 .content .content-avatar .avatar {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+  margin: 0 auto;
+}
+.join-2 .content .content-avatar h4 {
+  text-align: center;
+  margin: 1rem 0;
+}
+.join-2 .content .content-wrap {
+  text-align: center;
+  width: 31%;
+}
+@media screen and (max-width: 1200px) {
+  .join-2 .content .content-wrap {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .join-2 .content .content-wrap {
+    width: 80%;
+  }
+}
+.join-2 .content .logo-title {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.join-2 .content .title {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.join-2 .content .dots {
+  display: flex;
+  justify-content: center;
+}
+.join-2 .content .dots .dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  margin: 2rem 0.8rem;
+}
+.join-2 .content .dots .active {
+  background-color: #868585;
+}
+.join-2 .content .form input {
+  margin: 0.5rem 0;
+  width: 345px;
+  height: 4.5rem;
+  border: 2px solid #656565;
+  border-radius: 51px;
+  padding: 0 2rem;
+}
+.join-2 .content .form input:focus {
+  outline: none;
+}
+.join-2 .content .form p {
+  margin-bottom: 2rem;
+}
+.join-2 .content .form button {
+  background: #330D59;
+  border-radius: 20px;
+  font-size: 2rem;
+  color: white;
+  font-weight: 500;
+  padding: 1rem 2.5rem;
+  margin-top: 1rem;
+}
+
+.join-3 .container {
+  height: 100vh;
+}
+.join-3 .content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.join-3 .content .content-wrap {
+  text-align: center;
+  width: 50%;
+}
+@media screen and (max-width: 1200px) {
+  .join-3 .content .content-wrap {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .join-3 .content .content-wrap {
+    width: 80%;
+  }
+}
+.join-3 .content .logo-title {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.join-3 .content .title {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.join-3 .content .dots {
+  display: flex;
+  justify-content: center;
+}
+.join-3 .content .dots .dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  margin: 2rem 0.8rem;
+}
+.join-3 .content .dots .active {
+  background-color: #868585;
+}
+.join-3 .content .content-style {
+  display: grid;
+  height: 30rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  overflow: scroll;
+}
+.join-3 .content .content-style .content-style-item {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */
